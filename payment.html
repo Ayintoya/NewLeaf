@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewLeaf 🌱 – Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #065f46;
+    }
+    p {
+      font-size: 1rem;
+      color: #374151;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .crypto-box {
+      padding: 1.2rem;
+      border: 2px dashed #10b981;
+      border-radius: 12px;
+      background: #f9fafb;
+      margin-bottom: 2rem;
+    }
+    .crypto-box p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+      color: #065f46;
+      font-weight: 600;
+    }
+    button {
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: white;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(16,185,129,0.4);
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Secure Payment</h1>
+    <p>Pay your relocation planning fee using cryptocurrency.<br> For this demo, payment is marked as <strong>successful by default</strong>.</p>
+
+    <div class="crypto-box">
+      <p>Accepted: Bitcoin (BTC), Ethereum (ETH), USDT</p>
+      <p>Wallet Address: <code>demo-wallet-12345</code></p>
+    </div>
+
+    <button onclick="window.location.href='dashboard.html'">Proceed to Dashboard</button>
+
+    <footer>
+      <p>&copy; 2025 NewLeaf. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
