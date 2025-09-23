@@ -5,135 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NewLeaf – Start Fresh</title>
   <style>
-    body {
+    /* Reset */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      height: 100vh;
-      background: linear-gradient(135deg, #1abc9c 40%, #16a085 100%);
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      width: 95%;
+      max-width: 500px;
       color: #fff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    .left {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
-      text-align: left;
-    }
-
-    .left h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .left p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    .right {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f9f9f9;
-      color: #333;
-    }
-
-    .form-container {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 400px;
-    }
-
-    .form-container h2 {
-      margin-top: 0;
-      color: #16a085;
+    .card h1 {
+      font-size: 2.2rem;
       text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      opacity: 0.85;
     }
 
     label {
-      font-weight: bold;
-      margin-top: 1rem;
+      font-weight: 600;
       display: block;
+      margin: 1rem 0 0.3rem;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 12px;
       font-size: 1rem;
+      outline: none;
+      margin-bottom: 0.5rem;
+    }
+
+    textarea {
+      resize: vertical;
     }
 
     button {
-      margin-top: 1.5rem;
       width: 100%;
+      margin-top: 1rem;
       padding: 1rem;
-      background: #16a085;
-      color: white;
+      background: #38ef7d;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
       font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
     }
 
     button:hover {
-      background: #1abc9c;
+      background: #11998e;
+      transform: scale(1.03);
     }
 
     footer {
-      position: absolute;
-      bottom: 10px;
-      right: 20px;
+      margin-top: 1rem;
+      text-align: center;
       font-size: 0.85rem;
-      color: rgba(255,255,255,0.7);
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="left">
-    <div>
-      <h1>Turn Over a New Leaf</h1>
-      <p>Escape the past. Build your future.  
-      NewLeaf helps you relocate, restart, and reinvent your life—anonymously and securely.</p>
-    </div>
+  <div class="card">
+    <h1>Turn Over a New Leaf</h1>
+    <p>Escape the past. Build your future. Plan your new life today.</p>
+
+    <form>
+      <label>Destination</label>
+      <input type="text" placeholder="City or Country">
+
+      <label>Job Preference</label>
+      <select>
+        <option>Remote work</option>
+        <option>Retail</option>
+        <option>Hospitality</option>
+        <option>Construction</option>
+        <option>Healthcare</option>
+        <option>Other</option>
+      </select>
+
+      <label>Housing Type</label>
+      <select>
+        <option>Shared room</option>
+        <option>Apartment</option>
+        <option>House</option>
+        <option>No preference</option>
+      </select>
+
+      <label>Budget Range (monthly)</label>
+      <input type="text" placeholder="e.g. $500 - $1000">
+
+      <label>Timeline</label>
+      <select>
+        <option>Immediately</option>
+        <option>Within 3 months</option>
+        <option>6 months</option>
+        <option>1 year</option>
+      </select>
+
+      <label>Additional Notes</label>
+      <textarea rows="3" placeholder="Anything else we should know..."></textarea>
+
+      <label>Secure Contact (Email or Phone)</label>
+      <input type="text" placeholder="Enter contact info">
+
+      <button type="submit">Plan My New Life</button>
+    </form>
+
+    <footer>© 2025 NewLeaf – Start Fresh</footer>
   </div>
-
-  <div class="right">
-    <div class="form-container">
-      <h2>New Life Planner</h2>
-      <form>
-        <label>Where do you want to go?</label>
-        <input type="text" placeholder="City or Country">
-
-        <label>Preferred job type</label>
-        <input type="text" placeholder="e.g. Remote work, Retail, Hospitality">
-
-        <label>Housing preference</label>
-        <select>
-          <option>Shared room</option>
-          <option>Apartment</option>
-          <option>House</option>
-          <option>No preference</option>
-        </select>
-
-        <label>Contact info</label>
-        <input type="text" placeholder="Email or Phone number">
-
-        <button type="submit">Plan My New Life</button>
-      </form>
-    </div>
-  </div>
-
-  <footer>© 2025 NewLeaf</footer>
 </body>
 </html>
