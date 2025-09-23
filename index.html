@@ -10,76 +10,95 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9fafb;
+      background: #f3f4f6;
       color: #111827;
     }
     header {
-      background: #10b981;
+      background: linear-gradient(135deg, #059669, #10b981);
       color: white;
-      padding: 1rem 2rem;
+      padding: 3rem 2rem;
       text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
     header h1 {
       margin: 0;
-      font-size: 1.75rem;
+      font-size: 2.5rem;
+      font-weight: 700;
     }
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1rem;
-      opacity: 0.9;
+      margin: 1rem 0 0;
+      font-size: 1.2rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     main {
-      max-width: 600px;
-      margin: 2rem auto;
+      max-width: 700px;
+      margin: -3rem auto 3rem;
       background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
     }
     main h2 {
       margin-top: 0;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: #065f46;
+      text-align: center;
     }
     form {
       display: grid;
-      gap: 1rem;
-      margin-top: 1rem;
+      gap: 1.2rem;
+      margin-top: 1.5rem;
     }
     label {
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 0.3rem;
+      display: block;
     }
     input, select, textarea {
       width: 100%;
-      padding: 0.75rem;
-      border-radius: 8px;
+      padding: 0.85rem;
+      border-radius: 10px;
       border: 1px solid #d1d5db;
       font-size: 1rem;
       font-family: inherit;
+      background: #f9fafb;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #10b981;
+      box-shadow: 0 0 0 3px rgba(16,185,129,0.3);
     }
     textarea {
       resize: vertical;
-      min-height: 80px;
+      min-height: 90px;
     }
     button {
-      padding: 0.9rem;
+      padding: 1rem;
       border: none;
-      border-radius: 8px;
-      background: #10b981;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #059669, #10b981);
       color: white;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.05rem;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     button:hover {
-      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(16,185,129,0.4);
     }
     footer {
       text-align: center;
       padding: 2rem;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: #6b7280;
     }
   </style>
@@ -87,7 +106,7 @@
 <body>
   <header>
     <h1>NewLeaf 🌱</h1>
-    <p>Start over. Anywhere. A new life awaits you.</p>
+    <p>Turn over a new leaf. Leave the past behind. Start fresh anywhere in the world.</p>
   </header>
 
   <main>
